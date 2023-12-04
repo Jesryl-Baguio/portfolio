@@ -1,0 +1,21 @@
+#contact {
+  margin-top: 200px;
+  height: 70vh;
+  /* background-color: grey; */
+}
+#contact div {
+  height: 100%;
+
+}
+#contact h1 {
+  text-align: center;
+ 
+
+}
+
+
+#contact-right {
+  /* background-color: rgb(219,222,221); */
+  border-block-start-color: rgb(22,22,22);
+  border-radius: 10px;
+}
