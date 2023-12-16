@@ -23,6 +23,8 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/marquee.css">
 
+    
+
 
     <!--====== IDCON CDN ======-->
     <script src="https://kit.fontawesome.com/8397635816.js" crossorigin="anonymous"></script>
@@ -32,6 +34,35 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('zifqf-nt-ZNMY_Kfd');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                const contact_form = {
+                    name: this.name.value,
+                    email: this.email.value,
+                    subject: this.subject.value,
+                    message: this.message.value
+    };
+                // these IDs from the previous steps
+                emailjs.send('service_cme4kib', 'template_k99r86e', contact_form)
+                    .then(function() {
+                        alert('SUCCESS!');
+                    }, function(error) {
+                        alert('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -466,7 +497,7 @@
                                 <div class="contact-form-area wow fadeIn">
                                     <h2>GET IN TOUCH</h2>
                                     <div class="contact-form">
-                                        <form action="process.php" id="contact-form" method="POST">
+                                        <form action="contact-form" id="contact-form" method="POST">
                                             <div class="form-group" id="name-field">
                                                 <div class="form-input">
                                                     <input type="text" class="form-control" id="name" name="name" placeholder="Name.." required>
