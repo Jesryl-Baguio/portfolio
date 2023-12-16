@@ -1,21 +1,14 @@
 /*--------------------------------------------------------------------------------------
-Theme Name: JR RESUME & PERSONAL PORTFOLIO
-Theme URI: http://devitfamily.com
-Author URI: http://devitfamily.com
-Description: 100% Responsive, Highly Customizable, SEO Friendly Personal Portfolio HTML5 template using Twitter Bootstrap Latest, Search Engine Friendly.
-Author: QuomodoTheme
-Version: 1.0
 ----------------------------------------------------------------------------------------
     1. BASE CSS
     2. TOP AREA
         2.1 MAINMENU AREA
         2.2 WELCOME TEXT AREA
     3. ABOUT AREA
-    4. SERVICE AREA
+    4. TECHSTACK AREA
     5. EXPERIENCE AREA
     6. FUN FACT AREA
     7. PORTFOLIO AREA
-    8. TESTMONIAL AREA
     9. BLOG AREA
     10. CONTACT AREA
     11. FOOTER AREA
@@ -693,16 +686,18 @@ ul#nav li.active a {
 .single-service:hover::after {
     opacity: 1;
 }
-#techstack img {
+.techstack img {
     height: 80px;
     width: 80px;
     padding: 10px;
-    /* background-color: rgb(222, 225, 225); */
     margin: 0 10px 0 10px;
     border-radius: 10px;
     object-fit: contain;
     opacity: 80%;
   }
+.react-icon img {
+    height: 60px !important;
+}
 
 
 /*-----------------------------------
@@ -760,7 +755,7 @@ ul#nav li.active a {
 }
 
 /*------------------------------
-    6. PORTFOLIO AREA
+    6. PROJECT AREA
 -------------------------------*/
 
 .single-portfolio {
