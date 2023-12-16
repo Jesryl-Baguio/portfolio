@@ -25,7 +25,7 @@ Ajax Contact Form
         var formData = {
             'name' : $('input[name="form-name"]').val(),
             'email' : $('input[name="form-email"]').val(),
-            'phone' : $('input[name="form-phone"]').val(),
+            'subject' : $('input[name="form-subject"]').val(),
             'message' : $('textarea[name="form-message"]').val()
         };
 
