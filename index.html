@@ -31,10 +31,7 @@
     <link href="css/responsive.css" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    
-  
-    
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
@@ -54,14 +51,27 @@
     };
                 // these IDs from the previous steps
                 emailjs.send('service_cme4kib', 'template_k99r86e', contact_form)
-                    .then(function() {
-                        console.log('Message sent Successfully!');
-                    }, function(error) {
+                .then(function() {
+                        // Hide the submit button
+                        document.getElementById('submit-button').style.display = 'none';
+                        // Display the success message
+                        document.getElementById('success-message').style.display = 'block';
+                        // Hide the success message after 3 seconds
+                        setTimeout(function() {
+                            document.getElementById('success-message').style.display = 'none';
+                            // Reset the form
+                            document.getElementById('contact-form').reset();
+                            // Show the submit button again
+                            document.getElementById('submit-button').style.display = 'block';
+                        }, 3000);
+                    })
+                    .catch(function(error) {
                         alert('FAILED...', error);
                     });
             });
         }
     </script> 
+
 </head>
 
 <body>
@@ -505,8 +515,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" name="send">send message</button> 
-                                                <!-- <span class="fs-1 text-success">Message Sent Successfully!</span> -->
+                                                <button type="submit" name="send" id="submit-button">send message</button>
+                                                <!-- <button type="submit" name="send">send message</button>  -->
+                                                <span id="success-message" class="fs-1 text-success" style="display: none;">Message Sent Successfully!</span>
                                              </div>
                                         </form> 
                                         
