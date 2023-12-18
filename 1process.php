@@ -7,10 +7,10 @@ require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
 
 if(isset($_POST['send'])) {
-    $name = $_POST['form-name'];
-    $email = $_POST['form-email'];
-    $subject = $_POST['form-subject'];
-    $message = $_POST['form-message'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
     $mail = new PHPMailer(true);
 
 try {

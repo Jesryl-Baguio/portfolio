@@ -23,10 +23,10 @@ Ajax Contact Form
 
         // get the form data
         var formData = {
-            'name' : $('input[name="form-name"]').val(),
-            'email' : $('input[name="form-email"]').val(),
-            'subject' : $('input[name="form-subject"]').val(),
-            'message' : $('textarea[name="form-message"]').val()
+            'name' : $('input[name="name"]').val(),
+            'email' : $('input[name="email"]').val(),
+            'subject' : $('input[name="subject"]').val(),
+            'message' : $('textarea[name="message"]').val()
         };
 
         // process the form
@@ -49,9 +49,9 @@ Ajax Contact Form
                     $('#email-field').find('.form-input').append('<span class="help-block">' + data.errors.email + '</span>');
                 }
 
-                if (data.errors.phone) {
+                if (data.errors.subject) {
                     $('#phone-field').addClass('has-error');
-                    $('#phone-field').find('.form-input').append('<span class="help-block">' + data.errors.phone + '</span>');
+                    $('#phone-field').find('.form-input').append('<span class="help-block">' + data.errors.subject + '</span>');
                 }
 
                 if (data.errors.message) {

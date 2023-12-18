@@ -1,14 +1,14 @@
 <?php
 // Configure your Subject Prefix and Recipient here
-$subjectPrefix = 'Jesryl Baguio';
+$subjectPrefix = 'New Email Sent';
 $emailTo       = 'jesrylbaguio@gmail.com';
 $errors = array(); // array to hold validation errors
 $data   = array(); // array to pass back data
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name    = stripslashes(trim($_POST['form-name']));
-    $email   = stripslashes(trim($_POST['form-email']));
-    $subject = stripslashes(trim($_POST['form-subject']));
-    $message = stripslashes(trim($_POST['form-message']));
+    $name    = stripslashes(trim($_POST['name']));
+    $email   = stripslashes(trim($_POST['email']));
+    $subject = stripslashes(trim($_POST['subject']));
+    $message = stripslashes(trim($_POST['message']));
     if (empty($name)) {
         $errors['name'] = 'Name is required.';
     }
@@ -27,11 +27,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $data['errors']  = $errors;
     } else {
         $subject = "$subjectPrefix $subject";
-        $body    = "
+        $body    = '
             <strong>Name: </strong>'.$name.'<br />
             <strong>Email: </strong>'.$email.'<br />
             <strong>Message: </strong>'.nl2br($message).'<br />
-        ";
+        ';
         $headers  = "MIME-Version: 1.1" . PHP_EOL;
         $headers .= "Content-type: text/html; charset=utf-8" . PHP_EOL;
         $headers .= "Content-Transfer-Encoding: 8bit" . PHP_EOL;
