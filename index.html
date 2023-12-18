@@ -22,10 +22,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/marquee.css">
-
-    
-
-
+ 
     <!--====== IDCON CDN ======-->
     <script src="https://kit.fontawesome.com/8397635816.js" crossorigin="anonymous"></script>
 
@@ -35,7 +32,8 @@
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
@@ -56,13 +54,13 @@
                 // these IDs from the previous steps
                 emailjs.send('service_cme4kib', 'template_k99r86e', contact_form)
                     .then(function() {
-                        alert('SUCCESS!');
+                        alert('Message sent Successfully!');
                     }, function(error) {
                         alert('FAILED...', error);
                     });
             });
         }
-    </script>
+    </script> 
 </head>
 
 <body>
@@ -180,7 +178,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="https://drive.google.com/uc?export=download&amp;id=1XRPU8sV8fU2un9bdYk7zoSubNRJ0kgc9" class="download-btn">Download Cv</a>
+                        <a href=" 1https://drive.google.com/uc?export=download&amp;id=1XRPU8sV8fU2un9bdYk7zoSubNRJ0kgc9" class="download-btn">Download Cv</a>
                     </div>
                 </div>
             </div>
@@ -243,20 +241,6 @@
                       <li><i class="fa-brands fa-figma"></i></li>
                     </ul>
                   </div>
-                <!-- <div class="techstack">
-                    <h5 class="text-center" style="font-weight: bold;">OTHER STACK</h5>
-                          <img src="./img/techsctacks/html.png " alt="...">
-                          <img src="./img/techsctacks/css.png" alt="...">
-                          <img src="./img/techsctacks/javascript.png" alt="..."> 
-                          <img src="./img/techsctacks/bootstrap.png" alt="...">
-                          <img src="./img/techsctacks/nodejs.png" alt="...">
-                          <img class="react-icon" src="./img/techsctacks/reactjs-removebg-preview.png " alt="...">
-                          <img src="./img/techsctacks/php.png" alt="...">
-                          <img src="./img/techsctacks/laravellogo.png" alt="...">
-                          <img src="./img/techsctacks/expressjs.png" alt="...">
-                          <img src="./img/techsctacks/mongdb-removebg-preview.png" alt="...">  
-                          <img src="./img/techsctacks/github.png" alt="...">
-                </div> -->
             </div>
         </div>
     </section>
@@ -497,7 +481,8 @@
                                 <div class="contact-form-area wow fadeIn">
                                     <h2>GET IN TOUCH</h2>
                                     <div class="contact-form">
-                                        <form action="1process.php" id="contact-form" method="POST">
+                            
+                                        <form action="process2.php" id="contact-form" method="POST">
                                             <div class="form-group" id="name-field">
                                                 <div class="form-input">
                                                     <input type="text" class="form-control" id="name" name="name" placeholder="Name.." required>
@@ -520,8 +505,10 @@
                                             </div>
                                             <div class="form-group">
                                                 <button type="submit" name="send">send message</button>
+                                                <!-- <span class="fs-1 text-success">Message Sent Successfully!</span> -->
                                             </div>
                                         </form>
+                                        
                                     </div>
                                 </div>
                             </div>
