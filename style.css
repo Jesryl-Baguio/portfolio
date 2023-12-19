@@ -966,8 +966,10 @@ a.read-more {
     margin-bottom: inherit;
 }
 
+
 .contact-area .form-control:focus {
     border-color: #333333;
+
     box-shadow: 0 0 0;
     outline: 0 none;
 }
